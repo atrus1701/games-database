@@ -1,0 +1,67 @@
+
+
+.jquery-selector
+{
+	font-family: Times, Times New Roman, serif;
+	font-size: 13px;
+	width:640px;
+}
+
+.jquery-selector > div.entry
+{
+	display:block;
+	padding:5px;
+	margin:0px;
+	border:solid 1px #666;
+	background-color:white;
+	cursor:text;
+	width:300px;
+	height:14px;
+	margin-bottom:5px;
+	width:630px;
+}
+
+.jquery-selector > div.entry > input[type="textbox"]
+{
+	display:block;
+	width:98%;
+	margin:0 auto;
+	padding:0;
+	background-color:transparent;
+	border:0;
+	height:12px;
+}
+
+.jquery-selector .item-group
+{
+	border:dotted 1px black;
+	padding:3px;
+}
+
+.jquery-selector .item-group > b
+{ 
+	display:block; 
+	margin:0 5px;
+	font-family: Arial, sanserif;
+}
+
+.jquery-selector .item-name
+{
+	margin:0 5px 0 15px;
+	cursor:pointer;
+}
+
+.jquery-selector .item-name > input[type="checkbox"]
+{
+	margin-right:5px;
+}
+
+.jquery-selector .item-name:hover
+{
+	text-decoration:underline;
+}
+
+.jquery-selector .item-name[item-selected="yes"]
+{
+	
+}

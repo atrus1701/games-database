@@ -1,0 +1,54 @@
+
+
+.post_links a, 
+.return_menu a, 
+button, 
+input[type="submit"]
+{
+	display:inline-block;
+	padding:5px;
+	border:solid 1px #666;
+	background-color:#CCC;
+	color:black;
+	text-decoration:none;
+}
+
+.post_links a:hover, 
+.return_menu a:hover, 
+button:hover, 
+input[type="submit"]:hover
+{
+	background-color:#999;
+}
+
+
+.delete_form
+{
+	width:500px;
+	margin:10px auto;
+}
+
+.delete_form > div
+{
+	border:solid 1px #999;
+	padding:40px;
+}
+
+.delete_form input[value="Delete"]
+{
+	margin-top:10px;
+	float:right;
+}
+
+.delete_form input[value="Cancel"]
+{
+	float:left;
+	margin-top:10px;
+}
+
+.delete_form .record_name
+{
+	font-weight:bold;
+	margin:10px 20px;
+}
+

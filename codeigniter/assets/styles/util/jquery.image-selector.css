@@ -1,0 +1,19 @@
+
+
+.jquery-image-selector
+{
+}
+
+.jquery-image-selector select
+{
+	vertical-align:top;
+	margin-right:20px;
+	width:200px;
+}
+
+.jquery-image-selector img
+{
+	border:solid 1px gray;
+	padding:5px;
+}
+

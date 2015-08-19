@@ -1,0 +1,157 @@
+
+#results_container
+{
+	display:block;
+	margin:10px;
+	background-color:#CCC;
+	border:solid 1px black;
+	padding:10px;
+	text-align:center;
+}
+
+#results_container .error_message
+{
+	color:#FF6666;
+}
+
+.db_row
+{
+	border-bottom:dashed 1px #000;
+	padding:10px;
+}
+
+.db_row:first-child
+{
+	border-top:dashed 1px #000;
+}
+
+.db_row > label
+{
+	vertical-align:top;
+	padding:5px;
+	font-weight:bold;
+	display:inline-block;
+	width:150px;
+	border:dotted 1px gray;
+	margin-right:10px;
+}
+
+.db_row > div
+{
+	display:inline-block;
+}
+
+input[type="textbox"]
+{
+	display:inline-block;
+	padding:5px;
+	border:solid 1px #666;
+}
+
+select, button, input[type="submit"]
+{
+	display:inline-block;
+	padding:5px;
+}
+
+input[name="action"]
+{
+	float:right;
+	margin-top:10px;
+}
+
+.db_row input[maxlength="16"]
+{
+	width:80px;
+}
+
+.db_row input[maxlength="32"]
+{
+	width:175px;
+}
+
+.db_row input[maxlength="64"]
+{
+	width:350px;
+}
+
+.db_row input[maxlength="128"]
+{
+	width:700px;
+}
+
+.db_row textarea
+{
+	display:inline-block;
+	width:630px;
+	padding:5px;
+	border:solid 1px #666;
+}
+
+.db_row textarea[maxlength="256"]
+{
+	height:50px;
+}
+
+.db_row textarea[maxlength="512"]
+{
+	height:100px;
+}
+
+.db_row textarea[name="text"]
+{
+	height:600px;
+}
+
+input, textarea
+{
+	font-family: Times, Times New Roman, serif;
+	font-size: 13px;
+}
+
+
+.post_links
+{
+	
+}
+
+.post_links a, 
+.return_menu a, 
+button, 
+input[type="submit"]
+{
+	display:inline-block;
+	padding:5px;
+	border:solid 1px #666;
+	background-color:#CCC;
+	color:black;
+	text-decoration:none;
+}
+
+.post_links a:hover, 
+.return_menu a:hover, 
+button:hover, 
+input[type="submit"]:hover
+{
+	background-color:#999;
+}
+
+.post_links .add_link
+{
+	float:left;
+	margin-left:10px;
+}
+
+.post_links .edit_link
+{
+	float:right;
+	margin-right:10px;
+}
+
+.db_row > .files-label
+{
+}
+
+.db_row .files-list
+{
+}

@@ -1,0 +1,12 @@
+
+.search-list
+{
+	background-color:red;
+}
+
+.search-list .item
+{
+	padding:5px;
+	border:dotted 1px black;
+	margin-bottom:3px;
+}

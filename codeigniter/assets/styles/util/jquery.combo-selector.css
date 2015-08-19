@@ -1,0 +1,64 @@
+
+
+
+.jquery-combo-selector
+{
+	width:640px;
+}
+
+.jquery-combo-selector > .entry
+{
+	border:solid 1px #666;
+	padding:3px 10px;
+	margin-bottom:5px;
+	height:26px;
+}
+
+.jquery-combo-selector > .entry > select
+{
+	width:100px;
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.jquery-combo-selector > .entry > input
+{
+	width:100px;
+	margin-right:10px;
+}
+
+.jquery-combo-selector > .entry > button
+{
+}
+
+.jquery-combo-selector > .selections
+{
+	border:dotted 1px #666;
+}
+
+.jquery-combo-selector > .selections > div
+{
+	border-top:dotted 1px #999;
+	padding:3px 8px;
+}
+
+.jquery-combo-selector > .selections > div:hover
+{
+	background-color:#CCC;
+}
+
+.jquery-combo-selector > .selections > div:first-child
+{
+	border-top:none;
+}
+
+.jquery-combo-selector > .selections span
+{
+	display:inline-block;
+	width:150px;
+}
+
+.jquery-combo-selector > .selections button
+{
+}
+

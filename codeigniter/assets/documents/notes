@@ -1,0 +1,30 @@
+
+
+Rules for images:
+
+icons      16x16
+thumbnails 64x64
+artwork    256x256
+
+gallery    any size
+
+
+image selector
+
+combobox (3-height)
+image that chance when combobox changes
+
+DONE!
+
+
+Multiple Developers
+Multiple Publisher (with region)
+
++ publisher combobox
+  + region
+  + region
+  
++ developer combobox
+
+
+

@@ -1,0 +1,48 @@
+
+
+
+.jquery-tag-selector
+{
+	width:640px;
+}
+
+.jquery-tag-selector > .entry
+{
+	border:solid 1px #666;
+	padding:3px 10px;
+	margin-bottom:5px;
+	height:26px;
+}
+
+.jquery-tag-selector > .entry > input[type="textbox"]
+{
+	width:300px;
+	margin-right:10px;
+}
+
+.jquery-tag-selector > .entry > button
+{
+}
+
+.jquery-tag-selector > .selections
+{
+	border:dotted 1px #666;
+}
+
+.jquery-tag-selector > .selections > div
+{
+	border-top:dotted 1px #999;
+	padding:3px 8px;
+}
+
+.jquery-tag-selector > .selections > div:hover
+{
+	background-color:#CCC;
+}
+
+.jquery-tag-selector > .selections span
+{
+	display:inline-block;
+	width:150px;
+}
+

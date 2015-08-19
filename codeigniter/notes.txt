@@ -1,0 +1,183 @@
+
+
+
+--------------------------------------------------------------------------------
+       
+{table}_exists
+get_{table}_id
+get_list_for_admin_menu
+get_{table}_for_admin_add
+get_{table}_for_admin_edit
+get_game_for_admin_delete
+add_{table}
+update_{table}
+delete_{table}
+get_list_for_menu
+get_{table}_for_item_view
+
+get_tags
+search_tags
+add_tag
+delete_tag
+convert_tag_to_alphnumeric
+
+--------------------------------------------------------------------------------
+
+tags for each game/platform/compamy/gameseries
+
+metal gear solid 2
+
+exact match
+partial match
+break up the world and look for partial matches
+
+SELECT `table`, `table-id`, COUNT(`name`) AS `exact_matches`
+FROM `tag`
+WHERE `name`= ?
+GROUP BY `table`,`table-id`
+HAVING COUNT(`name`) > 0;
+
+SELECT `table`, `table-id`, COUNT(`name`) AS `partial_matches`
+FROM `tag`
+WHERE `name` LIKE '%?%'
+GROUP BY `table`,`table-id`
+HAVING COUNT(`name`) > 0;
+
+SELECT `table`, `table-id`, COUNT(`name`) AS `word_matches`
+FROM `tag`
+WHERE `name` LIKE '%?%'  # metal
+   OR `name` LIKE '%?%'  # gear
+   OR `name` LIKE '%?%'  # solid
+   OR `name` LIKE '%?%'  # 2  -- actually do not process words less than 3 characters
+GROUP BY `table`,`table-id`
+HAVING COUNT(`name`) > 0;
+
+SELECT `table`, `table-id` `exact_matches`, `partial_matches`, `word_matches`
+FROM (
+	# exact matches sql
+	SELECT `table`, `table-id`, COUNT(`name`) AS `exact_matches`
+	FROM `tag`
+	WHERE `name`= ?
+	GROUP BY `table`,`table-id`
+	HAVING COUNT(`name`) > 0;
+) ExactMatches
+LEFT JOIN (
+	# partial matches sql
+	SELECT `table`, `table-id`, COUNT(`name`) AS `partial_matches`
+	FROM `tag`
+	WHERE `name` LIKE '%?%'
+	GROUP BY `table`,`table-id`
+	HAVING COUNT(`name`) > 0;
+) PartialMatches ON `ExactMatches`.`table`=`PartialMatches`.`table` AND `ExactMatches`.`table-id`=`PartialMatches`.`table-id`
+LEFT JOIN (
+	# word matches sql
+	SELECT `table`, `table-id`, COUNT(`name`) AS `word_matches`
+	FROM `tag`
+	WHERE `name` LIKE '%?%'  # metal
+	   OR `name` LIKE '%?%'  # gear
+	   OR `name` LIKE '%?%'  # solid
+	GROUP BY `table`,`table-id`
+	HAVING COUNT(`name`) > 0;
+) WordMatches ON `PartialMatches`.`table`=`WordMatches`.`table` AND `PartialMatches`.`table-id`=`WordMatches`.`table-id`
+ORDER BY `exact_matches`,`partial_matches`,`word_matches`
+LIMIT 20;
+
+
+--------------------------------------------------------------------------------
+
+
+Games:  
+  Final Fantasy X
+  Final Fantasy VII
+  Final Fantasy XIII
+  Mass Effect 2
+  Mass Effect 3
+  Mass Effect Trilogy
+  Deus Ex
+  Deus Ex: Invisible War
+  Deus Ex: Human Revolution
+        
+Developer: 
+  Ion Storm, 
+  Eidos Montreal, 
+  Nixxes Software, 
+  Feral Interactive, 
+  BioWare, 
+  Demiurge Studios,
+  Edge of Reality, 
+  Straight Right,
+  Square, 
+  Square Product Development Division 1
+
+Publisher: 
+  Eidos Interactive
+  Aspyr
+  Square Enix
+  Feral Interactive, 
+  Microsoft Game Studios,
+  Electronic Arts, 
+  Square,
+  Square Electronic Arts, 
+  Sony Computer Entertainment,
+
+Series: 
+  Deus Ex, 
+  Final Fantasy, 
+  Mass Effect
+
+Platform: 
+  OnLive, 
+  Mac OS, 
+  Windows, 
+  PS2, 
+  PS3, 
+  Xbox 360, 
+  Wii U, 
+  PS Vita
+  Playstation,
+  Playstation Network
+
+Region: 
+  North America, 
+  Europe, 
+  Australia, 
+  Japan, 
+  International, 
+  PAL
+        
+Genre: Action role-playing
+
+--------------------------------------------------------------------------------
+
+SELECT `table`, `table-id`, SUM(`exact_matches`) AS `exact_matches`, SUM(`partial_matches`) AS `partial_matches`, SUM(`word_matches`) AS `word_matches`
+FROM (
+	SELECT `table`, `table-id`, COUNT(`name`) AS `exact_matches`, NULL AS `partial_matches`, NULL AS `word_matches`
+	FROM `tag`
+	WHERE `name`= 'final fantasy'
+	GROUP BY `table`,`table-id`
+	HAVING COUNT(`name`) > 0
+	UNION
+	# partial matches sql
+	SELECT `table`, `table-id`, NULL AS `exact_matches`, COUNT(`name`) AS `partial_matches`, NULL AS `word_matches`
+	FROM `tag`
+	WHERE `name` LIKE '%final fantasy%'
+	GROUP BY `table`,`table-id`
+	HAVING COUNT(`name`) > 0
+	UNION
+	# word matches sql
+	SELECT `table`, `table-id`, NULL AS `exact_matches`, NULL AS `partial_matches`, COUNT(`name`) AS `word_matches`
+	FROM `tag`
+	WHERE `name` LIKE '%final%'
+	   OR `name` LIKE '%fantasy%'
+	GROUP BY `table`,`table-id`
+	HAVING COUNT(`name`) > 0
+) matches
+GROUP BY `table`, `table-id`
+ORDER BY `exact_matches` DESC,`partial_matches` DESC,`word_matches` DESC
+LIMIT 50;
+
+--------------------------------------------------------------------------------
+
+
+
+

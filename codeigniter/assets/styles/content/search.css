@@ -1,0 +1,30 @@
+.search-list
+{
+}
+
+.search-list .item
+{
+	padding:5px;
+	border:dotted 1px black;
+	margin-bottom:3px;
+}
+
+.search-list .item a
+{
+	color:black;
+	text-decoration:none;
+}
+
+.search-list .item a:hover
+{
+	text-decoration:underline;
+}
+
+.search-list .item .type
+{
+	display:inline-block;
+	width:80px;
+	text-align:right;
+	font-style:italic;
+	margin-right:15px;
+}

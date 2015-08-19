@@ -1,0 +1,43 @@
+/* General
+ *============================================================================*/
+input:focus { outline: none; }
+html, body { }
+body, #page_container, #header, #content { margin:0; padding:0;
+	font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+body { background:#eeeeee; }
+.container { width:960px; margin:0 auto; position:relative; }
+.container:before, .container:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.container:after { clear: both; }  
+.container { zoom: 1; }
+
+
+/* Header
+ *============================================================================*/
+#header { height:100px; background-color:#666666;
+	color:white; text-shadow:1px 1px 1px #000; padding:10px; }
+#header .container { height:100px; }
+#header .container .return-link { 
+	position:absolute; top:5px; left:5px; } 
+#header ul { list-style-type:none; padding:0px; margin:0px; 
+	position:absolute; right:5px; bottom:5px; }
+#header li { display:inline-block; margin-right:5px; }
+#header a { color:white; text-decoration:none; }
+#header a:hover { border-bottom:solid 1px white; }
+#header .search-box { position:absolute; top:5px; right:5px; }
+	#header .search-box input { font-family: Arial, Helvetica, sans-serif; font-size:12px; }
+	#header .search-box input[type="textbox"] { display:inline-block; margin:0; padding:5px; border:solid 1px #666; width:200px; }
+	#header .search-box input[type="submit"] { display:inline-block; margin:0; padding:5px; border:solid 1px #666; background-color:#CCC; color:black; text-decoration:none; }
+
+
+/* Content
+ *============================================================================*/
+#content { background:white; }
+#content .container { background-color:#EEE; font-size:12px; padding:20px; }
+#content h1 { margin:0; margin-bottom:20px; padding:0; display:inline-block; }
+#content .return_menu { float:right; margin-top:12px; }
+				
+/* Footer
+ *============================================================================*/
+#footer { background-color:#666666;	color:white; padding:10px; }
+#footer a { color:#999999; text-decoration:none; }
+#footer a:hover { border-bottom:solid 1px white; }

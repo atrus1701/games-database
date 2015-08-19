@@ -1,0 +1,66 @@
+
+
+.list
+{
+	width:600px;
+	padding:20px;
+}
+
+.list .item
+{
+	border-bottom:1px dashed black;
+	padding:10px;
+}
+
+.list .item:first-of-type
+{
+	border-top:1px dashed black;
+	margin-top:10px;
+}
+
+.list .item:hover
+{
+	background-color:#CCC;
+}
+
+.list .item .contents
+{
+	display:inline-block;
+	width:455px;
+}
+
+.list .item .contents img
+{
+	vertical-align:middle;
+	margin-right:5px;
+}
+
+.list .item .links
+{
+	display:inline-block;
+	width:120px;
+	text-align:right;
+}
+
+.list .item .links a,
+.add_link a
+{
+	display:inline-block;
+	padding:5px;
+	border:solid 1px #666;
+	background-color:#CCC;
+	color:black;
+	text-decoration:none;
+}
+
+.list .item .links a:hover,
+.add_link a:hover
+{
+	background-color:#999;
+}
+
+.list .item .links a:first-child
+{
+	margin-right:10px;
+}
+
