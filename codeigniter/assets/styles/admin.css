@@ -1,3 +1,15 @@
+	
+	#header .section-wrapper {
+		background-color:#999;
+	}
+
+	#header .logo {
+		background-image:url('../images/controller_admin.png');
+	}
+
+	#footer .section-core {
+		background-color:#999;
+	}	
 
 #results_container
 {

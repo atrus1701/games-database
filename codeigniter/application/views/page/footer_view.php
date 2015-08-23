@@ -1,1 +1,4 @@
-Game Database Project  <span style="float:right">Crystal Barton, Junjie Shan, Siri Vandana Valluri, Varalakshmi Veluri</span>
+Video Game Directory
+<span style="float:right">
+	&copy; 2015 Crystal Barton
+</span>

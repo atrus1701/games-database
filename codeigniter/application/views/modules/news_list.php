@@ -20,7 +20,7 @@
 		
 	<?php else: ?>
 	
-		<div class="item">NONE</div>
+		<p>No news items found.</p>
 		
 	<?php endif; ?>
 	

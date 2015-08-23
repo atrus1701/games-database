@@ -24,36 +24,34 @@
 	<body>
 
 		<?php //var_dump($header); ?>
-
+		
 		<div id="header">
-			<div class="container">
-				<?php $this->load->view('page/header_view', $header); ?>
+			<div class="section-wrapper">
+				<div class="section-layout">
+					<div class="section-core">
+						<?php $this->load->view('page/header_view', $header); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div id="content">
-			<div class="container">
-				
-				<?php /*
-				<?php if( isset($content['item']) ): ?>
-				<pre>
-					<?php print_r($content['item']); ?>
-				</pre>
-				<?php endif; ?>
-				<?php if( isset($content['list']) ): ?>
-				<pre>
-					<?php print_r($content['list']); ?>
-				</pre>
-				<?php endif; ?>
-				*/ ?>
-
-				<?php $this->load->view('content/'.$page.'_view', $content); ?>
+			<div class="section-wrapper">
+				<div class="section-layout">
+					<div class="section-core">
+						<?php $this->load->view('content/'.$page.'_view', $content); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div id="footer">
-			<div class="container">
-				<?php $this->load->view('page/footer_view', $footer); ?>
+			<div class="section-wrapper">
+				<div class="section-layout">
+					<div class="section-core">
+						<?php $this->load->view('page/footer_view', $footer); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 		

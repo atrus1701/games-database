@@ -19,7 +19,10 @@ class MY_Model extends CI_Model
 	/**
 	 * Default Contructor.
 	 */
-	function __construct() { parent::__construct(); }
+	function __construct()
+	{
+		parent::__construct();
+	}
 
 
 	/**
