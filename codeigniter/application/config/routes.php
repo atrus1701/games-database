@@ -39,17 +39,25 @@
 */
 
 $route['default_controller'] = "news/menu";
-$route['404_override'] = '';
+$route['404_override'] = 'error404';
 
-//$route['menu/(:any)'] = 'menu/index/$1';
+// Admin routes for menus.
+$route['admin/games'] = 'game/admin_menu';
+$route['admin/companies'] = 'company/admin_menu';
+$route['admin/platforms'] = 'platform/admin_menu';
+$route['admin/regions'] = 'region/admin_menu';
+
+// Admin routes - generic.
+$route['admin/(:any)/(:any)'] = '$1/admin_$2';
+$route['admin/(:any)'] = '$1/admin_menu';
+$route['admin'] = 'news/admin_menu';
+
+// Front end routes.
 $route['news'] = 'news/menu';
-$route['game'] = 'game/menu';
-$route['game-series'] = 'gameseries/menu';
-$route['company'] = 'company/menu';
-$route['platform'] = 'platform/menu';
-$route['country'] = 'country/menu';
-$route['(:any)/admin'] = '$1/admin_news';
-$route['(:any)/admin/(:any)'] = '$1/admin_$2';
+$route['games'] = 'game/menu';
+$route['gameseries'] = 'gameseries/menu';
+$route['companies'] = 'company/menu';
+$route['platforms'] = 'platform/menu';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
