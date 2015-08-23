@@ -20,7 +20,11 @@ class MY_Controller extends CI_Controller
 	/**
 	 * Default Contructor.
 	 */
-	function __construct() { parent::__construct(); $this->reset_data(); }
+	function __construct()
+	{
+		parent::__construct();
+		$this->reset_data();
+	}
 
 
 	/**
@@ -39,7 +43,7 @@ class MY_Controller extends CI_Controller
 		$this->_data['content'] = array();
 		$this->_data['footer'] = array();
 		
-		$this->add_script( 'util/jquery-1.8.2' );
+		$this->add_script( 'util/jquery-1.8.2.min' );
 		$this->add_style( 'util/normalize_2.0.1' );
 		$this->add_style( 'site' );
 		$this->add_script( 'site' );
